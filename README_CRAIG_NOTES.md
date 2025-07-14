@@ -32,6 +32,8 @@ v3.0.0 - has the `ci.yaml` OK
 
 v3.1.0 - has the detect-secrets precommit as gitleaks did not seem to work. Tested with `ci.yaml`
 
+v3.1.1 - add CHANGELOG.md
+
 --------------------------------------------------------------------
 
 # Set up
