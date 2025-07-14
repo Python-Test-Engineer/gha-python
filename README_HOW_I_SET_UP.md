@@ -1,5 +1,7 @@
 # Versions
 
+*Notes for Craig*
+
 v1.0.0 - Basic set up to run src and tests
 
 v1.1.0 - has precommit hooks testing for:
