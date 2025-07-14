@@ -7,6 +7,10 @@ START_FOLDER = "./src"  # Change this to your desired start folder
 # Define the words to search for
 
 words_to_search = [
+    "SECRET_API",
+    "SECRET_PROD",
+    "api_token",
+    "password",
     "access_key",
     "access_token",
     "api_key",
@@ -50,10 +54,9 @@ words_to_search = [
     "twilio_token",
 ]
 
-words_to_search = []
 
 file_types = [".py", ".js"]  # Add or remove file types as needed
-words_to_search = []
+# words_to_search = []
 
 # Initialize an empty list to store the results
 results = []
