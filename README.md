@@ -1,3 +1,18 @@
+# Versions
+
+v1.0.0 - Basic set up to run src and tests
+
+v1.1.0 - has precommit hooks testing for:
+
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-added-large-files
+      - id: check-merge-conflict
+
+      - id: ruff
+
+
 # Set up
 
 With a blank folder and just `.vscode` in it, run: `uv init`
