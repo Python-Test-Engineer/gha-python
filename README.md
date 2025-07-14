@@ -12,6 +12,8 @@ v1.1.0 - has precommit hooks testing for:
 
       - id: ruff
 
+v1.2.0 - Added conventional commits.
+
 --------------------------------------------------------------------
 
 # Set up
