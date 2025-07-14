@@ -26,6 +26,8 @@ v2.0.0 - consolidate to a v2.0.0
 
 v2.1.0 - has the GHA `uv_run_lint_tests_calc_matrix_security.yaml` OK
 
+v2.2.0 - has the GHA `docker_validate_build_scan_deploy.yaml` OK (added secrets)
+
 --------------------------------------------------------------------
 
 # Set up
