@@ -2,7 +2,7 @@
 
 With a blank folder and just `.vscode` in it, run: `uv init`
 
-This gives: 
+This gives:
 
 ![uv-init](./_images/01-uv-init.png)
 
@@ -123,3 +123,92 @@ uv sync
 # List PyPi packages
 
 `uv python list  | Select-String "3\."` (windows)
+
+# Ruff
+`uv run ruff check src` will run ruff.
+
+`uv run ruff check --fix src` will run ruff and fix issues.
+
+`uv run ruff format src` will run ruff and fix issues.
+
+# Pre-Commit
+
+To add pre-commit for Python with `uv`:
+
+## 1. Add pre-commit as a dev dependency
+
+```bash
+# Add pre-commit as dev dependency
+uv add --dev pre-commit
+```
+
+## 2. Create .pre-commit-config.yaml
+
+Create a `.pre-commit-config.yaml` file in your project root:
+
+```yaml
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-added-large-files
+      - id: check-merge-conflict
+
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.1.6
+    hooks:
+      - id: ruff
+        args: [--fix]
+      - id: ruff-format
+
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.7.1
+    hooks:
+      - id: mypy
+```
+
+## 3. Install the pre-commit hooks
+
+```bash
+# Install pre-commit hooks
+uv run pre-commit install
+
+# Install for commit-msg hook (optional)
+uv run pre-commit install --hook-type commit-msg
+```
+
+## 4. Run pre-commit
+
+```bash
+# Run on all files
+uv run pre-commit run --all-files
+
+# Run on staged files only
+uv run pre-commit run
+
+# Update hooks to latest versions
+uv run pre-commit autoupdate
+```
+
+## 5. Alternative: Use uvx for one-time setup
+
+```bash
+# Install pre-commit hooks without adding to project
+uvx pre-commit install
+
+# Run pre-commit
+uvx pre-commit run --all-files
+```
+
+## 6. Test the setup
+
+```bash
+# Make a commit to test hooks
+git add .
+git commit -m "Test pre-commit hooks"
+```
+
+The hooks will now run automatically on every commit. The `uv run pre-commit install` command is the key step that sets up the Git hooks.
