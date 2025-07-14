@@ -14,6 +14,8 @@ v1.1.0 - has precommit hooks testing for:
 
 v1.2.0 - Added conventional commits.
 
+v1.3.0 - Added MyPy in precommit.
+
 --------------------------------------------------------------------
 
 # Set up
