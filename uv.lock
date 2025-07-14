@@ -21,6 +21,15 @@ wheels = [
 ]
 
 [[package]]
+name = "conventional-pre-commit"
+version = "4.2.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/59/fe/9ec6fd8b281a809d7184f724129de18853f41ad93e998e2328dc9d470fde/conventional_pre_commit-4.2.0.tar.gz", hash = "sha256:6b5a2867338c58a1d14d300de68b56c17b7c8403bb122155f38639a423d21ff1", size = 26870, upload-time = "2025-05-05T22:33:12.302Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/a3/11/915d4078610200126d83f9af37391c1d02ae2c208788164bc3678b14cca3/conventional_pre_commit-4.2.0-py3-none-any.whl", hash = "sha256:08acc2bca20bc998090653ca0de9b250e5a51b1f9b0b1bae00f424cc071616cb", size = 16807, upload-time = "2025-05-05T22:33:10.659Z" },
+]
+
+[[package]]
 name = "distlib"
 version = "0.3.9"
 source = { registry = "https://pypi.org/simple" }
@@ -61,6 +70,7 @@ dependencies = [
 
 [package.dev-dependencies]
 dev = [
+    { name = "conventional-pre-commit" },
     { name = "pre-commit" },
 ]
 
@@ -71,7 +81,10 @@ requires-dist = [
 ]
 
 [package.metadata.requires-dev]
-dev = [{ name = "pre-commit", specifier = ">=4.2.0" }]
+dev = [
+    { name = "conventional-pre-commit", specifier = ">=4.2.0" },
+    { name = "pre-commit", specifier = ">=4.2.0" },
+]
 
 [[package]]
 name = "identify"

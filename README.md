@@ -228,3 +228,38 @@ git commit -m "Test pre-commit hooks"
 ```
 
 The hooks will now run automatically on every commit. The `uv run pre-commit install` command is the key step that sets up the Git hooks.
+
+# Conventional commits
+
+`uv add --dev conventional-pre-commit`
+
+`uv run pre-commit install --hook-type commit-msg`
+
+types:
+  - feat
+  - fix
+  - docs
+  - style
+  - refactor
+  - test
+  - chore
+  - ci
+  - build
+  - perf
+  - revert
+
+scopes:
+  - api
+  - ui
+  - auth
+  - db
+  - config
+
+optional_scopes: true
+
+# Valid commit messages
+git commit -m "feat: add user authentication"
+git commit -m "fix: resolve database connection issue"
+git commit -m "docs: update README with setup instructions"
+git commit -m "feat(auth): implement JWT token validation"
+git commit -m "fix(db): handle connection timeout errors"
