@@ -54,9 +54,9 @@ words_to_search = [
     "twilio_token",
 ]
 
-
+words_to_search = []
 file_types = [".py", ".js"]  # Add or remove file types as needed
-# words_to_search = []
+
 
 # Initialize an empty list to store the results
 results = []
