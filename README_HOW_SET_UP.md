@@ -18,6 +18,8 @@ v1.3.0 - Added MyPy in precommit.
 
 v1.4.0 - Added custom script `scan_secrets.py` and added pre-commit hook to scan secrets.
 
+v1.4.1 - Updated versions in precommit.
+
 
 --------------------------------------------------------------------
 
