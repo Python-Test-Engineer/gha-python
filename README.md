@@ -17,7 +17,7 @@
 
 `uv run pre-commit install --hook-type commit-msg` sets up precommit and conventional commits
 
-Test:
+## Test
 
 `git add .`
 
