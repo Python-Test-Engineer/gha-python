@@ -31,5 +31,5 @@ jobs:
 
       - name: Print version info
         run: |
-          echo "Current version: $(semantic-release version --current)"
+          echo "Current version: $(semantic-release version --print)"
           echo "Next version: $NEXT_VERSION"
