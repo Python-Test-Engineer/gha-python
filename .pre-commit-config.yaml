@@ -12,12 +12,10 @@ repos:
       - id: pretty-format-json
       - id: mixed-line-ending
 
-  # - repo: https://github.com/astral-sh/ruff-pre-commit
-  #   rev: v0.1.6
+  # - repo: https://github.com/gitleaks/gitleaks
+  #   rev: v8.27.2 # Specify the desired version of Gitleaks
   #   hooks:
-  #     - id: ruff
-  #       args: [--fix]
-  #     - id: ruff-format
+  #     - id: gitleaks
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
     # Ruff version.
