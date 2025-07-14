@@ -5,6 +5,7 @@
 - Ruff for linting
 - MyPy for type checking
 - uses a custom Python script to check for secrets
+- uses `detect-secrets` to check for secrets
 
 ## Setup
 
