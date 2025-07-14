@@ -22,6 +22,8 @@ v1.4.0 - Added custom script `scan_secrets.py` and added pre-commit hook to scan
 
 v1.4.1 - Updated versions in precommit.
 
+v2.0.0 - consolidate to a v2.0.0
+
 
 --------------------------------------------------------------------
 
