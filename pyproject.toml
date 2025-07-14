@@ -1,6 +1,6 @@
 [project]
 name = "gha-python"
-version = "3.1.1"
+version = "3.2.0"
 description = "Generic template for Python GitHub Actions with pre-commit and semantic versioning with conventional commit"
 readme = "README.md"
 requires-python = ">=3.10"
