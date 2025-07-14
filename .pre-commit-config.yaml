@@ -8,17 +8,41 @@ repos:
       - id: check-added-large-files
       - id: check-merge-conflict
 
+  # - repo: https://github.com/astral-sh/ruff-pre-commit
+  #   rev: v0.1.6
+  #   hooks:
+  #     - id: ruff
+  #       args: [--fix]
+  #     - id: ruff-format
+
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.1.6
+    # Ruff version.
+    rev: v0.11.13
     hooks:
-      - id: ruff
+      # Run the linter.
+      - id: ruff-check
         args: [--fix]
+      # Run the formatter.
       - id: ruff-format
 
   - repo: https://github.com/pre-commit/mirrors-mypy
     rev: v1.12.0
     hooks:
       - id: mypy
+
+  - repo: local
+    hooks:
+      - id: scan_secrets_id
+        name: Scan for leaks
+        entry: python scan_secrets.py
+        language: python
+        stages: [pre-commit]
+
+  # - repo: https://github.com/PyCQA/bandit
+  #   rev: 1.7.5
+  #   hooks:
+  #     - id: bandit
+  #       args: ["-c", "pyproject.toml"]
 
   - repo: https://github.com/compilerla/conventional-pre-commit
     rev: v2.1.1
