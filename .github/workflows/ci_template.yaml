@@ -452,11 +452,11 @@ jobs:
           def generate_release_notes(next_version, current_version, features, fixes, breaking, other):
               """Generate formatted release notes"""
               # notes = f"# Release ${{ needs.semantic_release.outputs.next-version }}\n\n"
-              notes = "${{ steps.changelog-commit.outputs.commit_hash }}\n\n"
-              notes += f"${{ steps.changelog-commit.outputs.commit_author }}\n"
-              notes += f"${{ steps.changelog-commit.outputs.commit_date }}\n\n"
-              notes += f"${{ needs.semantic_release.outputs.next-version }}\n\n"
-              notes += f"${{ steps.changelog-commit.outputs.commit_message }}\n\n"
+              notes = "Commit: ${{ steps.changelog-commit.outputs.commit_hash }}\n\n"
+              notes += f"Author: ${{ steps.changelog-commit.outputs.commit_author }}\n"
+              notes += f"Date: ${{ steps.changelog-commit.outputs.commit_date }}\n\n"
+              notes += f"Next Version: ${{ needs.semantic_release.outputs.next-version }}\n\n"
+              notes += f"Commit Message: ${{ steps.changelog-commit.outputs.commit_message }}\n\n"
               notes += f"**Release Date**: {datetime.now().strftime('%Y-%m-%d')}\n\n"  # Add release date
 
               if breaking:
@@ -474,7 +474,7 @@ jobs:
               if other:
                   notes += "## 📝 Other Changes\n"
                   notes += "\n".join(other) + "\n\n"
-              notes += "## CHANGELOG.md Section\n"
+              notes += "## CCHANGELOG\n"
               # Read the latest section from CHANGELOG.md
               if os.path.exists('latest_changelog_section.md'):
                   with open('latest_changelog_section.md', 'r') as f:
