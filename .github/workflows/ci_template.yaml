@@ -462,7 +462,7 @@ jobs:
               notes += f"Latest Version: ${{ needs.semantic_release.outputs.next-version }}\n\n"
               notes += f"Commit Message: ${{ steps.changelog-commit.outputs.commit_message }}\n\n"
 
-
+              notes += f"(Changes with commit messages since last release)\n\n"
               if breaking:
                   notes += "## 💥 BREAKING CHANGES\n"
                   notes += "\n".join(breaking) + "\n\n"
