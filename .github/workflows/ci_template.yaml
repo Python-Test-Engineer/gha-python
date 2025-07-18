@@ -1,6 +1,6 @@
 name: CI/CD Pipeline Template
 
-run-name: Template CI/CD Pipeline
+run-name: Template CI/CD Pipeline - ${{ github.sha}}
 
 # This workflow is a template for CI/CD pipelines for Python projects but can have Python swapped for Node.js or other languages.
 
