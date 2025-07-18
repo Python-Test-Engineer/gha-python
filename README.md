@@ -7,6 +7,7 @@
 - uses a custom Python script to check for secrets
 - uses `detect-secrets` to check for secrets
 
+
 ## Setup
 
 `git clone https://github.com/Python-Test-Engineer/gha-python.git`
